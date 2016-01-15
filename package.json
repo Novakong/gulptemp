@@ -1,0 +1,34 @@
+{
+  "name": "gulptest",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "kong",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-cache": "^0.3.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-base64": "^1.3.2",
+    "gulp-css-spriter": "^0.3.3",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.2",
+    "gulp-uglify": "^1.4.1",
+    "vinyl-named": "^1.1.0",
+    "webpack": "~1.0.0-beta6",
+    "webpack-stream": "^3.1.0"
+  }
+}
