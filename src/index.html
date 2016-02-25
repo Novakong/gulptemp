@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8" />
+	<title>olay2016</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" href="sass/main.css">
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script src="dep/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="dep/jquery.transit.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="dep/WeixinApi.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="loading hide" id="loading">
+		<div class="loadtext">
+			<div id="loadpercent">0</div>
+			<div class="loadbar"></div>
+		</div>
+	</div>
+	<div id="wrapper" class="wrapper">
+		<div id="page3" class="page3 hide">
+			
+		</div>
+		
+		<div id="page2" class="page2 hide">
+			<img src="img/0.png" alt="" class="bg_award" id="bg_award">
+			<a class="btn_getcoupon"></a>
+		</div>
+		<div id="page1" class="page1">
+			<canvas class="cvs" id="cvs" width="640" height="1136"></canvas>
+			<a class="btn_open" id="btn_open"></a>
+		</div>
+	</div>
+	<div id="sharepage" class="sharepage">
+		
+	</div>
+<script src="js/index.js"></script>
+</body>
+</html>

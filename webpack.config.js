@@ -1,29 +1,32 @@
 var webpack = require('webpack');
 var path = require('path');
+var fs= require('fs') ;
+
 
 function getEntry() {
-	var jsPath = path.resolve(__dirname, 'js');
+	var jsPath = path.resolve(__dirname, 'src/js');
 	var dirs = fs.readdirSync(jsPath);
 	var matchs = [], files = {};
 	dirs.forEach(function (item) {
-		matchs = item.match(/(.+)\.js$/);
+		matchs = item.match(/(.+)\.entry\.js$/);
+		console.log(matchs);
 		if (matchs) {
-			files[matchs[1]] = path.resolve(__dirname, 'js', item);
+			files[matchs[1]] = path.resolve(__dirname, 'src/js', item);
 		}
 	});
 	return files;
 }
-
 module.exports = {
-	devtool: "source-map",
+	// devtool: "source-map",
 	entry: getEntry(),
 	output: {
-		path: path.join(__dirname + 'dist/js/'),
+		path: __dirname + '/dist/js/',
 		filename: "[name].js",
 		publicPath: 'dist/js/'
 	},
 	module: {
 		loaders: [
+			// { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
 			// { test: /\.css$/, loader:"style!css"},
 			// { test: /\.html$/, loader:'html'},
 			// { test: /\.json$/, loader:'json'},
@@ -35,18 +38,22 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			jquery: __dirname+"/js/dep/jquery.min.js"
-		}
+			jquery: __dirname+"/lib/jquery-2.1.1.min.js",
+			kpreload: __dirname+"/lib/kpreload.js",
+		},
+		root: [
+			path.resolve('./lib')
+		]
 	},
 	plugins: [
-		new webpack.ProvidePlugin({
-			$: 'jquery',
-			jQuery: 'jquery'
-		}),
-		new webpack.optimize.CommonsChunkPlugin('common.js'),
-		new uglifyJsPlugin({
+		// new webpack.ProvidePlugin({
+		// 	$: 'jquery',
+		// 	jQuery: 'jquery'
+		// }),
+		// new webpack.optimize.CommonsChunkPlugin('common.js'),
+		new webpack.optimize.UglifyJsPlugin({
 			compress: {
-				warnings: false;
+				warnings: false
 			}
 		})
 	]

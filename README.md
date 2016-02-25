@@ -1,2 +1,0 @@
-# gulptemp
-a templete

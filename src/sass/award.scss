@@ -1,0 +1,230 @@
+$ppr:40px/1rem;
+@import "mixin";
+@import "normalize";
+html,body{
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	font-family:"microsoft yahei","SimHei";
+	background: #000;
+}
+img{
+	width: 100%;
+	height: auto;
+}
+.loading{
+	@include mask;
+	height: 26rem;
+	background:#000;
+	z-index: 100;
+	#loadpercent{
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 0;
+		color: #f0e3a9;
+		font: 0.5rem "microsoft yahei";
+		text-align: center;
+		margin-top: -1rem;
+	}
+}
+.loadpic{
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	top: 50%;
+	left: 7rem;
+	margin-top: -4rem;
+}
+.active .loadpic{
+	animation: rotate 2s infinite linear;
+}
+@keyframes rotate{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+.awardbg{
+	position: absolute;
+	height: 26rem;
+	top: 0;
+	left: 0;
+}
+.a1,.a2,.a3,.a4{
+	position: absolute;
+}
+.a1{
+	width: 3.5rem;
+	height: 4.2rem;
+	top: 7.8rem;
+	left: 11.6rem;
+}
+.a2{
+	width: 3rem;
+	height: 3.5rem;
+	top: 12.8rem;
+	left: 10rem;
+}
+.a3{
+	width: 2.9rem;
+	height: 3.3rem;
+	top: 16.6rem;
+	left: 10.3rem;
+}
+.a4{
+	width: 2.7rem;
+	height: 3.4rem;
+	top: 20.2rem;
+	left: 10.4rem;
+}
+.awardmask{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.detailbox{
+	position: absolute;
+	width: 100%;
+	height: 26rem;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+}
+.detailcontentwrapper{
+	position: relative;
+	width: 13rem;
+	left: 1rem;
+	top: 2rem;
+	height: 20rem;
+	border: 1px solid #b69453;
+	border-radius: 16px;
+	padding: 0.5rem;
+}
+.detailcontent{
+	width: 13rem;
+	height: 18rem;
+	overflow: auto;
+}
+.detail_close{
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	top: 0;
+	right: 0;
+
+}
+//page_reg
+.il{
+	position: absolute;
+	width: 10.8rem;
+	height: 1.25rem;
+	left: 2.3rem;
+	input{
+		width: 7.625rem;
+		height: 1.25rem;
+	    background: #570000;
+	    border: #a79867 1px solid;
+	    margin: 0;
+	    padding: 0;
+	    top: 0;
+	    right: 0;
+	    position: absolute;
+	    color: #fff;
+	    outline: none;
+	    font:  0.6rem/1.25rem 'microsoft yahei';
+	    text-align: center;
+	}
+}
+.lname{
+	top: 15rem;
+	background: url(http://bos.bj.baidubce.com/we-gd/olay/2016cny/img/awardpage/label_name.png) no-repeat left center/2.7rem;
+}
+.lmobile{
+	top: 17rem;
+	background: url(http://bos.bj.baidubce.com/we-gd/olay/2016cny/img/awardpage/label_mobile.png) no-repeat left center/2.7rem;
+}
+.laddr{
+	top: 19rem;
+	background: url(http://bos.bj.baidubce.com/we-gd/olay/2016cny/img/awardpage/label_addr.png) no-repeat left center/2.7rem;
+}
+.tips{
+	position: absolute;
+	width: 100%;
+	height: 1rem;
+	top: 20.5rem;
+	left: 0;
+	text-align: center;
+	color: #fff;
+	font: 0.5rem/1rem "microsoft yahei";
+}
+.btn_submit{
+	position: absolute;
+	display: block;
+	width: 250px/$ppr;
+	height: 79px/$ppr;
+	top: 21.5rem;
+	left: 195px/$ppr;
+}
+.btn_detail{
+	position: absolute;
+	display: block;
+	width: 96px/$ppr;
+	height: 29px/$ppr;
+	top: 24.4rem;
+	left: 40px/$ppr;
+}
+.page_tips{
+	@include mask;
+	height: 26rem;
+	background: rgba(0,0,0,0.8);
+	.tips_success{
+		position: absolute;
+		width: 100%;
+		height: 420px/$ppr;
+		top: 50%;
+		margin-top: -300px/$ppr;
+		background: url(http://bos.bj.baidubce.com/we-gd/olay/2016cny/img/awardpage/popup_success.png) no-repeat center/100%;
+		.btn_share{
+			position: absolute;
+			display: block;
+			width: 253px/$ppr;
+			height: 75px/$ppr;
+			bottom: 2rem;
+			left: 4.9rem;
+			background: url(http://bos.bj.baidubce.com/we-gd/olay/2016cny/img/awardpage/btn_share.png) no-repeat center/100%;
+		}
+	}
+	.tips_share{
+		position: absolute;
+		width: 120px/$ppr;
+		top: 0;
+		right: 0;
+	}
+}
+.mask_ajax{
+	@include mask;
+	height: 26rem;
+	background: rgba(0,0,0,0.8);
+	font: 0.7rem/26rem "microsoft yahei";
+	color: #999;
+	text-align: center;
+}
+.page_success{
+	@include mask;
+	font-size: 0;
+	.btn_share1{
+		position: absolute;
+		display: block;
+		width: 254px/$ppr;
+		height: 65px/$ppr;
+		top: 11.5rem;
+		left: 4.8rem;
+	}
+	.bg_success{
+		height: 26rem;
+	}
+}
